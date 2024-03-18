@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol AuthenticationProtocol: AnyObject {
+    func getGoogleAuthToken() async throws
+}
