@@ -7,14 +7,42 @@
 
 import UIKit
 
+protocol EmailViewDelegate: AnyObject {
+    func didTapBack(view: EmailView)
+}
+
 class EmailView: UIView {
+    
+    weak var emailViewDelegate: EmailViewDelegate?
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var passwordTextFieldOutlet: UITextField!
+    @IBOutlet weak var emailTextFieldOutlet: UITextField!
+    @IBOutlet weak var backOutlet: UIButton! {
+        didSet {
+            backOutlet.layer.cornerRadius = 20
+        }
     }
-    */
-
+    
+    @IBAction func signInAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func backAction(_ sender: UIButton) {
+        emailViewDelegate?.didTapBack(view: self)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    //MARK: private methods
+    private func commonInit() {
+        guard let subView = Bundle.main.loadNibNamed("EmailView", owner: self, options: nil)?.first as? UIView else { return }
+        subView.fixInView(self)
+    }
 }
