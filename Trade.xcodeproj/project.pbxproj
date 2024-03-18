@@ -9,46 +9,61 @@
 /* Begin PBXBuildFile section */
 		348A607A2BA5AA3F009F4578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A60792BA5AA3F009F4578 /* AppDelegate.swift */; };
 		348A607C2BA5AA3F009F4578 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A607B2BA5AA3F009F4578 /* SceneDelegate.swift */; };
-		348A607E2BA5AA3F009F4578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A607D2BA5AA3F009F4578 /* ViewController.swift */; };
+		348A607E2BA5AA3F009F4578 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A607D2BA5AA3F009F4578 /* LoginViewController.swift */; };
 		348A60812BA5AA3F009F4578 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 348A60802BA5AA3F009F4578 /* Base */; };
 		348A60832BA5AA40009F4578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348A60822BA5AA40009F4578 /* Assets.xcassets */; };
 		348A60862BA5AA40009F4578 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 348A60852BA5AA40009F4578 /* Base */; };
-		348A60912BA5AA40009F4578 /* TradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A60902BA5AA40009F4578 /* TradeTests.swift */; };
-		348A609B2BA5AA40009F4578 /* TradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A609A2BA5AA40009F4578 /* TradeUITests.swift */; };
-		348A609D2BA5AA40009F4578 /* TradeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A609C2BA5AA40009F4578 /* TradeUITestsLaunchTests.swift */; };
+		348A60AE2BA5AB3F009F4578 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348A60AD2BA5AB3F009F4578 /* LoginView.xib */; };
+		348A60B12BA5AB61009F4578 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A60B02BA5AB61009F4578 /* LoginView.swift */; };
+		348A60B62BA5B6F6009F4578 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A60B52BA5B6F6009F4578 /* UIView+Extension.swift */; };
+		348A61092BA5CEA5009F4578 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 348A61082BA5CEA5009F4578 /* GoogleService-Info.plist */; };
+		348A61B72BA60323009F4578 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 348A61B62BA60323009F4578 /* FirebaseAuth */; };
+		348A61B92BA6033B009F4578 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 348A61B82BA6033B009F4578 /* GoogleSignIn */; };
+		348A61BB2BA60C5C009F4578 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 348A61BA2BA60C5C009F4578 /* GoogleSignInSwift */; };
+		348A61E02BA6101B009F4578 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A61DF2BA6101B009F4578 /* LoginViewModel.swift */; };
+		348A61F92BA61ACF009F4578 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A61F82BA61ACF009F4578 /* AuthenticationProtocol.swift */; };
+		348A61FB2BA61AF6009F4578 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A61FA2BA61AF6009F4578 /* AuthenticationManager.swift */; };
+		348A61FD2BA62103009F4578 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A61FC2BA62103009F4578 /* Utilities.swift */; };
+		349BC8042BA713AE00FE144F /* GoogleSignInResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC8032BA713AE00FE144F /* GoogleSignInResultModel.swift */; };
+		349BC8062BA713C800FE144F /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC8052BA713C800FE144F /* AuthDataResultModel.swift */; };
+		34BA91A52BA88FC400B03ED2 /* EmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34BA91A42BA88FC400B03ED2 /* EmailView.xib */; };
+		34BA91A72BA88FCF00B03ED2 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BA91A62BA88FCF00B03ED2 /* EmailView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		348A608D2BA5AA40009F4578 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 348A606E2BA5AA3F009F4578 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 348A60752BA5AA3F009F4578;
-			remoteInfo = Trade;
+/* Begin PBXCopyFilesBuildPhase section */
+		348A60D92BA5C9A8009F4578 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		348A60972BA5AA40009F4578 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 348A606E2BA5AA3F009F4578 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 348A60752BA5AA3F009F4578;
-			remoteInfo = Trade;
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		348A60762BA5AA3F009F4578 /* Trade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348A60792BA5AA3F009F4578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		348A607B2BA5AA3F009F4578 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		348A607D2BA5AA3F009F4578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		348A607D2BA5AA3F009F4578 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		348A60802BA5AA3F009F4578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		348A60822BA5AA40009F4578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		348A60852BA5AA40009F4578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		348A60872BA5AA40009F4578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		348A608C2BA5AA40009F4578 /* TradeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		348A60902BA5AA40009F4578 /* TradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeTests.swift; sourceTree = "<group>"; };
-		348A60962BA5AA40009F4578 /* TradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		348A609A2BA5AA40009F4578 /* TradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeUITests.swift; sourceTree = "<group>"; };
-		348A609C2BA5AA40009F4578 /* TradeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		348A60AD2BA5AB3F009F4578 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		348A60B02BA5AB61009F4578 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		348A60B52BA5B6F6009F4578 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		348A61082BA5CEA5009F4578 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		348A61DF2BA6101B009F4578 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		348A61F82BA61ACF009F4578 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
+		348A61FA2BA61AF6009F4578 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		348A61FC2BA62103009F4578 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		349BC8032BA713AE00FE144F /* GoogleSignInResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInResultModel.swift; sourceTree = "<group>"; };
+		349BC8052BA713C800FE144F /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		34BA91A42BA88FC400B03ED2 /* EmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailView.xib; sourceTree = "<group>"; };
+		34BA91A62BA88FCF00B03ED2 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,20 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		348A60892BA5AA40009F4578 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		348A60932BA5AA40009F4578 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				348A61BB2BA60C5C009F4578 /* GoogleSignInSwift in Frameworks */,
+				348A61B72BA60323009F4578 /* FirebaseAuth in Frameworks */,
+				348A61B92BA6033B009F4578 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				348A60782BA5AA3F009F4578 /* Trade */,
-				348A608F2BA5AA40009F4578 /* TradeTests */,
-				348A60992BA5AA40009F4578 /* TradeUITests */,
 				348A60772BA5AA3F009F4578 /* Products */,
+				348A61B52BA60323009F4578 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				348A60762BA5AA3F009F4578 /* Trade.app */,
-				348A608C2BA5AA40009F4578 /* TradeTests.xctest */,
-				348A60962BA5AA40009F4578 /* TradeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,32 +100,130 @@
 		348A60782BA5AA3F009F4578 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
-				348A60792BA5AA3F009F4578 /* AppDelegate.swift */,
-				348A607B2BA5AA3F009F4578 /* SceneDelegate.swift */,
-				348A607D2BA5AA3F009F4578 /* ViewController.swift */,
-				348A607F2BA5AA3F009F4578 /* Main.storyboard */,
-				348A60822BA5AA40009F4578 /* Assets.xcassets */,
-				348A60842BA5AA40009F4578 /* LaunchScreen.storyboard */,
+				349BC8022BA7139F00FE144F /* Models */,
+				348A61F72BA61ABA009F4578 /* Service Managers */,
+				348A61F62BA61AAD009F4578 /* Service Protocols */,
+				348A61DE2BA61009009F4578 /* ViewModels */,
+				348A61052BA5CCD0009F4578 /* GoogleService-Info */,
+				348A60B42BA5B6E0009F4578 /* Extensions */,
+				348A60AC2BA5AADB009F4578 /* Storyboards */,
+				348A60AB2BA5AAD3009F4578 /* Views */,
+				348A60AA2BA5AAC9009F4578 /* View Controllers */,
+				348A60A92BA5AA78009F4578 /* Supporting Files */,
 				348A60872BA5AA40009F4578 /* Info.plist */,
 			);
 			path = Trade;
 			sourceTree = "<group>";
 		};
-		348A608F2BA5AA40009F4578 /* TradeTests */ = {
+		348A60A92BA5AA78009F4578 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				348A60902BA5AA40009F4578 /* TradeTests.swift */,
+				348A60822BA5AA40009F4578 /* Assets.xcassets */,
+				348A607B2BA5AA3F009F4578 /* SceneDelegate.swift */,
+				348A60792BA5AA3F009F4578 /* AppDelegate.swift */,
 			);
-			path = TradeTests;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		348A60992BA5AA40009F4578 /* TradeUITests */ = {
+		348A60AA2BA5AAC9009F4578 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				348A609A2BA5AA40009F4578 /* TradeUITests.swift */,
-				348A609C2BA5AA40009F4578 /* TradeUITestsLaunchTests.swift */,
+				348A607D2BA5AA3F009F4578 /* LoginViewController.swift */,
 			);
-			path = TradeUITests;
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		348A60AB2BA5AAD3009F4578 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34BA91A32BA88FB500B03ED2 /* EmailView */,
+				348A60AF2BA5AB44009F4578 /* LoginView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		348A60AC2BA5AADB009F4578 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				348A60842BA5AA40009F4578 /* LaunchScreen.storyboard */,
+				348A607F2BA5AA3F009F4578 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		348A60AF2BA5AB44009F4578 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				348A60AD2BA5AB3F009F4578 /* LoginView.xib */,
+				348A60B02BA5AB61009F4578 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		348A60B42BA5B6E0009F4578 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				348A60B52BA5B6F6009F4578 /* UIView+Extension.swift */,
+				348A61FC2BA62103009F4578 /* Utilities.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		348A61052BA5CCD0009F4578 /* GoogleService-Info */ = {
+			isa = PBXGroup;
+			children = (
+				348A61082BA5CEA5009F4578 /* GoogleService-Info.plist */,
+			);
+			path = "GoogleService-Info";
+			sourceTree = "<group>";
+		};
+		348A61B52BA60323009F4578 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		348A61DE2BA61009009F4578 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				348A61DF2BA6101B009F4578 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		348A61F62BA61AAD009F4578 /* Service Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				348A61F82BA61ACF009F4578 /* AuthenticationProtocol.swift */,
+			);
+			path = "Service Protocols";
+			sourceTree = "<group>";
+		};
+		348A61F72BA61ABA009F4578 /* Service Managers */ = {
+			isa = PBXGroup;
+			children = (
+				348A61FA2BA61AF6009F4578 /* AuthenticationManager.swift */,
+			);
+			path = "Service Managers";
+			sourceTree = "<group>";
+		};
+		349BC8022BA7139F00FE144F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				349BC8032BA713AE00FE144F /* GoogleSignInResultModel.swift */,
+				349BC8052BA713C800FE144F /* AuthDataResultModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		34BA91A32BA88FB500B03ED2 /* EmailView */ = {
+			isa = PBXGroup;
+			children = (
+				34BA91A42BA88FC400B03ED2 /* EmailView.xib */,
+				34BA91A62BA88FCF00B03ED2 /* EmailView.swift */,
+			);
+			path = EmailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,51 +236,21 @@
 				348A60722BA5AA3F009F4578 /* Sources */,
 				348A60732BA5AA3F009F4578 /* Frameworks */,
 				348A60742BA5AA3F009F4578 /* Resources */,
+				348A60D92BA5C9A8009F4578 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Trade;
+			packageProductDependencies = (
+				348A61B62BA60323009F4578 /* FirebaseAuth */,
+				348A61B82BA6033B009F4578 /* GoogleSignIn */,
+				348A61BA2BA60C5C009F4578 /* GoogleSignInSwift */,
+			);
 			productName = Trade;
 			productReference = 348A60762BA5AA3F009F4578 /* Trade.app */;
 			productType = "com.apple.product-type.application";
-		};
-		348A608B2BA5AA40009F4578 /* TradeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 348A60A32BA5AA40009F4578 /* Build configuration list for PBXNativeTarget "TradeTests" */;
-			buildPhases = (
-				348A60882BA5AA40009F4578 /* Sources */,
-				348A60892BA5AA40009F4578 /* Frameworks */,
-				348A608A2BA5AA40009F4578 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				348A608E2BA5AA40009F4578 /* PBXTargetDependency */,
-			);
-			name = TradeTests;
-			productName = TradeTests;
-			productReference = 348A608C2BA5AA40009F4578 /* TradeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		348A60952BA5AA40009F4578 /* TradeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 348A60A62BA5AA40009F4578 /* Build configuration list for PBXNativeTarget "TradeUITests" */;
-			buildPhases = (
-				348A60922BA5AA40009F4578 /* Sources */,
-				348A60932BA5AA40009F4578 /* Frameworks */,
-				348A60942BA5AA40009F4578 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				348A60982BA5AA40009F4578 /* PBXTargetDependency */,
-			);
-			name = TradeUITests;
-			productName = TradeUITests;
-			productReference = 348A60962BA5AA40009F4578 /* TradeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -196,14 +265,6 @@
 					348A60752BA5AA3F009F4578 = {
 						CreatedOnToolsVersion = 15.3;
 					};
-					348A608B2BA5AA40009F4578 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 348A60752BA5AA3F009F4578;
-					};
-					348A60952BA5AA40009F4578 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 348A60752BA5AA3F009F4578;
-					};
 				};
 			};
 			buildConfigurationList = 348A60712BA5AA3F009F4578 /* Build configuration list for PBXProject "Trade" */;
@@ -215,13 +276,15 @@
 				Base,
 			);
 			mainGroup = 348A606D2BA5AA3F009F4578;
+			packageReferences = (
+				348A60FF2BA5CB02009F4578 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				348A61022BA5CB39009F4578 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 348A60772BA5AA3F009F4578 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				348A60752BA5AA3F009F4578 /* Trade */,
-				348A608B2BA5AA40009F4578 /* TradeTests */,
-				348A60952BA5AA40009F4578 /* TradeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,21 +296,10 @@
 			files = (
 				348A60832BA5AA40009F4578 /* Assets.xcassets in Resources */,
 				348A60862BA5AA40009F4578 /* Base in Resources */,
+				348A61092BA5CEA5009F4578 /* GoogleService-Info.plist in Resources */,
+				34BA91A52BA88FC400B03ED2 /* EmailView.xib in Resources */,
+				348A60AE2BA5AB3F009F4578 /* LoginView.xib in Resources */,
 				348A60812BA5AA3F009F4578 /* Base in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		348A608A2BA5AA40009F4578 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		348A60942BA5AA40009F4578 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,43 +310,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348A607E2BA5AA3F009F4578 /* ViewController.swift in Sources */,
+				348A607E2BA5AA3F009F4578 /* LoginViewController.swift in Sources */,
+				348A61FB2BA61AF6009F4578 /* AuthenticationManager.swift in Sources */,
 				348A607A2BA5AA3F009F4578 /* AppDelegate.swift in Sources */,
+				348A61E02BA6101B009F4578 /* LoginViewModel.swift in Sources */,
+				348A61FD2BA62103009F4578 /* Utilities.swift in Sources */,
+				34BA91A72BA88FCF00B03ED2 /* EmailView.swift in Sources */,
+				348A60B12BA5AB61009F4578 /* LoginView.swift in Sources */,
+				349BC8062BA713C800FE144F /* AuthDataResultModel.swift in Sources */,
+				348A60B62BA5B6F6009F4578 /* UIView+Extension.swift in Sources */,
 				348A607C2BA5AA3F009F4578 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		348A60882BA5AA40009F4578 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				348A60912BA5AA40009F4578 /* TradeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		348A60922BA5AA40009F4578 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				348A609B2BA5AA40009F4578 /* TradeUITests.swift in Sources */,
-				348A609D2BA5AA40009F4578 /* TradeUITestsLaunchTests.swift in Sources */,
+				348A61F92BA61ACF009F4578 /* AuthenticationProtocol.swift in Sources */,
+				349BC8042BA713AE00FE144F /* GoogleSignInResultModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		348A608E2BA5AA40009F4578 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 348A60752BA5AA3F009F4578 /* Trade */;
-			targetProxy = 348A608D2BA5AA40009F4578 /* PBXContainerItemProxy */;
-		};
-		348A60982BA5AA40009F4578 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 348A60752BA5AA3F009F4578 /* Trade */;
-			targetProxy = 348A60972BA5AA40009F4578 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		348A607F2BA5AA3F009F4578 /* Main.storyboard */ = {
@@ -491,82 +522,6 @@
 			};
 			name = Release;
 		};
-		348A60A42BA5AA40009F4578 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 375U999S53;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobility.TradeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trade";
-			};
-			name = Debug;
-		};
-		348A60A52BA5AA40009F4578 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 375U999S53;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobility.TradeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Trade.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Trade";
-			};
-			name = Release;
-		};
-		348A60A72BA5AA40009F4578 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 375U999S53;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobility.TradeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Trade;
-			};
-			name = Debug;
-		};
-		348A60A82BA5AA40009F4578 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 375U999S53;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobility.TradeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Trade;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,25 +543,44 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		348A60A32BA5AA40009F4578 /* Build configuration list for PBXNativeTarget "TradeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				348A60A42BA5AA40009F4578 /* Debug */,
-				348A60A52BA5AA40009F4578 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		348A60A62BA5AA40009F4578 /* Build configuration list for PBXNativeTarget "TradeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				348A60A72BA5AA40009F4578 /* Debug */,
-				348A60A82BA5AA40009F4578 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		348A60FF2BA5CB02009F4578 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.22.1;
+			};
+		};
+		348A61022BA5CB39009F4578 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		348A61B62BA60323009F4578 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 348A60FF2BA5CB02009F4578 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		348A61B82BA6033B009F4578 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 348A61022BA5CB39009F4578 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		348A61BA2BA60C5C009F4578 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 348A61022BA5CB39009F4578 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 348A606E2BA5AA3F009F4578 /* Project object */;
 }
