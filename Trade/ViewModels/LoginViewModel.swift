@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+class LoginViewModel {
+    var authenticationProtocol: AuthenticationProtocol!
+    
+    init(authenticationProtocol: AuthenticationProtocol) {
+        self.authenticationProtocol = authenticationProtocol
+    }
+    
+    func getGoogleAuthToken() {
+        Task {
+            try await authenticationProtocol.getGoogleAuthToken()
+        }
+    }
+}
