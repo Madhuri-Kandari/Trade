@@ -7,10 +7,14 @@
 
 import UIKit
 
-extension UIApplication {
+final class Utilities {
     
+    static let shared = Utilities()
+    private init() { }
+
     @MainActor
-    public func topViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    func topViewController(controller: UIViewController? = nil) -> UIViewController? {
+        let controller = controller ?? UIApplication.shared.keyWindow?.rootViewController
         if let navigationController = controller as? UINavigationController {
             return topViewController(controller: navigationController.visibleViewController)
         }
@@ -24,4 +28,5 @@ extension UIApplication {
         }
         return controller
     }
+    
 }
