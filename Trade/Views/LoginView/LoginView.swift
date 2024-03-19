@@ -6,9 +6,9 @@
 //
 
 import UIKit
-//import GoogleSignInSwift
 import GoogleSignIn
 
+//MARK: LoginViewDelegate
 protocol LoginViewDelegate: AnyObject {
     func didTapSignInEmail(view: LoginView)
 }
@@ -55,6 +55,15 @@ class LoginView: UIView {
         subView.fixInView(self)
         viewModel = LoginViewModel(authenticationProtocol: AuthenticationManager())
     }
+}
+
+extension LoginView {
+    func didTapSignInOnEmailView(view: EmailView, email: String, password: String) {
+        viewModel.createUser(email: email, password: password)
+    }
     
+    func isAuthenticatedUserAvailable() -> Bool {
+        return viewModel.isAuthenticatedUserAvailable()
+    }
 }
 

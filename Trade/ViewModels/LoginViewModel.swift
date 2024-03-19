@@ -6,8 +6,9 @@
 //
 
 import Foundation
-
+@MainActor
 class LoginViewModel {
+    
     var authenticationProtocol: AuthenticationProtocol!
     
     init(authenticationProtocol: AuthenticationProtocol) {
@@ -16,7 +17,29 @@ class LoginViewModel {
     
     func getGoogleAuthToken() {
         Task {
-            try await authenticationProtocol.getGoogleAuthToken()
+            do {
+                try await authenticationProtocol.getGoogleAuthToken()
+            } catch {
+                throw URLError(.badURL)
+            }
         }
+    }
+    
+    
+    
+    func createUser(email: String, password: String) {
+        Task {
+            do {
+                let isSuccess = try await authenticationProtocol.createUser(email: email, password: password)
+                print(isSuccess.email ?? "")
+            } catch {
+                throw URLError(.badURL)
+            }
+        }
+    }
+    
+    func isAuthenticatedUserAvailable() -> Bool {
+        let user = try? authenticationProtocol.getAuthenticatedUser()
+        return user == nil ? false : true
     }
 }

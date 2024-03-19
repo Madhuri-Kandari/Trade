@@ -8,5 +8,10 @@
 import Foundation
 
 protocol AuthenticationProtocol: AnyObject {
+    //MARK: Google Sign-In
     func getGoogleAuthToken() async throws
+    
+    //MARK: Email Sign-In
+    func createUser(email: String, password: String) async throws -> AuthDataResultModel
+    func getAuthenticatedUser() throws -> AuthDataResultModel
 }

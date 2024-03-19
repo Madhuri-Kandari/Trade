@@ -13,6 +13,7 @@ final class Utilities {
     private init() { }
 
     @MainActor
+    //MARK: On main since this is UI
     func topViewController(controller: UIViewController? = nil) -> UIViewController? {
         let controller = controller ?? UIApplication.shared.keyWindow?.rootViewController
         if let navigationController = controller as? UINavigationController {

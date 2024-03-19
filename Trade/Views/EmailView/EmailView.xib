@@ -13,6 +13,7 @@
                 <outlet property="backOutlet" destination="o2e-l7-Tpa" id="KRo-4L-iIc"/>
                 <outlet property="emailTextFieldOutlet" destination="XdH-fg-YUG" id="wDZ-TW-L9O"/>
                 <outlet property="passwordTextFieldOutlet" destination="B1X-1e-ZoF" id="UfV-np-PuA"/>
+                <outlet property="signInOutlet" destination="a49-Kx-Pd0" id="BtG-OK-GBm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
