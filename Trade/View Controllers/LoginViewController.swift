@@ -13,12 +13,6 @@ class LoginViewController: UIViewController {
     private var loginView: LoginView!
     private var emailView: EmailView!
     
-    private var isAuthenticatedUserAvailable: Bool = false {
-        didSet {
-            configureViewOnLoading()
-        }
-    }
-    
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +36,11 @@ class LoginViewController: UIViewController {
         loginView = LoginView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         loginView.fixInView(self.view)
         loginView.loginViewDelegate = self
-        isAuthenticatedUserAvailable = loginView.isAuthenticatedUserAvailable()
+        
+        if loginView.isAuthenticatedUserAvailable() {
+            removeSubViews()
+            print("Settings screen")
+        }
     }
     
     //MARK: Public methods
@@ -70,16 +68,5 @@ extension LoginViewController: EmailViewDelegate {
     
     func didTapSignIn(view: EmailView, email: String, password: String) {
         loginView.didTapSignInOnEmailView(view: view, email: email, password: password)
-    }
-}
-
-extension LoginViewController {
-    func configureViewOnLoading() {
-        removeSubViews()
-        if isAuthenticatedUserAvailable {
-            print("next")
-        } else {
-            configureLoginView()
-        }
     }
 }

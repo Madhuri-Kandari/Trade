@@ -21,44 +21,47 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="6xv-VK-TMa">
-                    <rect key="frame" x="288.66666666666669" y="257" width="250.00000000000006" height="199"/>
+                    <rect key="frame" x="293.66666666666669" y="257" width="240.00000000000006" height="199"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPo-33-xey" customClass="GIDSignInButton">
-                            <rect key="frame" x="0.0" y="0.0" width="250" height="34.333333333333336"/>
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="34.333333333333336"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="tintColor" systemColor="systemBlueColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34.329999999999998" id="gqk-Uz-Ypx"/>
-                                <constraint firstAttribute="width" constant="250" id="yML-J1-1mY"/>
+                                <constraint firstAttribute="width" constant="240" id="yML-J1-1mY"/>
                             </constraints>
                             <connections>
                                 <action selector="signInGoogleAction:" destination="-1" eventType="touchUpInside" id="hR6-YW-MIW"/>
                             </connections>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-8Y-yp0">
-                            <rect key="frame" x="0.0" y="82.333333333333314" width="250" height="34.333333333333343"/>
+                            <rect key="frame" x="0.0" y="82.333333333333314" width="240" height="34.333333333333343"/>
                             <color key="backgroundColor" systemColor="systemBlueColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="250" id="4EE-BP-h2J"/>
+                                <constraint firstAttribute="width" constant="240" id="4EE-BP-h2J"/>
                                 <constraint firstAttribute="height" constant="34.329999999999998" id="Wmb-MX-0YE"/>
                             </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Sign-In with Email">
-                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="signInEmailAction:" destination="-1" eventType="touchUpInside" id="64P-jF-zCP"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEM-Hx-OYQ">
-                            <rect key="frame" x="0.0" y="164.66666666666669" width="250" height="34.333333333333343"/>
+                            <rect key="frame" x="0.0" y="164.66666666666669" width="240" height="34.333333333333343"/>
                             <color key="backgroundColor" systemColor="systemBlueColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34.329999999999998" id="A8A-UN-ATK"/>
-                                <constraint firstAttribute="width" constant="250" id="wwH-nM-a3R"/>
+                                <constraint firstAttribute="width" constant="240" id="wwH-nM-a3R"/>
                             </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Sign-In with Phone Number">
-                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                         </button>
                     </subviews>
@@ -79,9 +82,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

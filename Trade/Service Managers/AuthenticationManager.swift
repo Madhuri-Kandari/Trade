@@ -56,3 +56,10 @@ extension AuthenticationManager {
         return AuthDataResultModel(user: user)
     }
 }
+
+//MARK: Sign-Out
+extension AuthenticationManager {
+    nonisolated func signOut() throws {
+        try Auth.auth().signOut()
+    }
+}

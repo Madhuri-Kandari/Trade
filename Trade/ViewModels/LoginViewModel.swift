@@ -9,6 +9,7 @@ import Foundation
 @MainActor
 class LoginViewModel {
     
+    var displayName: String?
     var authenticationProtocol: AuthenticationProtocol!
     
     init(authenticationProtocol: AuthenticationProtocol) {
@@ -30,8 +31,9 @@ class LoginViewModel {
     func createUser(email: String, password: String) {
         Task {
             do {
-                let isSuccess = try await authenticationProtocol.createUser(email: email, password: password)
-                print(isSuccess.email ?? "")
+                let result = try await authenticationProtocol.createUser(email: email, password: password)
+                guard let displayName = result.displayName else { return }
+                print(displayName)
             } catch {
                 throw URLError(.badURL)
             }
