@@ -14,4 +14,5 @@ protocol AuthenticationProtocol: AnyObject {
     //MARK: Email Sign-In
     func createUser(email: String, password: String) async throws -> AuthDataResultModel
     func getAuthenticatedUser() throws -> AuthDataResultModel
+    func signOut() throws
 }
