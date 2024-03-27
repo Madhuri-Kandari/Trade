@@ -12,6 +12,17 @@ class LoginViewController: UIViewController {
     //MARK: Properties
     private var loginView: LoginView!
     private var emailView: EmailView!
+    private var phoneNumberView: PhoneNumberView!
+    private var otpView: OTPView!
+    
+    private var isLoggedInUser: Bool = false {
+        didSet {
+            removeSubViews()
+            print("Home")
+        }
+    }
+    
+    private var phoneNumber: String = ""
     
     //MARK: viewDidLoad
     override func viewDidLoad() {
@@ -29,6 +40,14 @@ class LoginViewController: UIViewController {
             if view is EmailView {
                 view.removeFromSuperview()
             }
+            
+            if view is PhoneNumberView {
+                view.removeFromSuperview()
+            }
+            
+            if view is OTPView {
+                view.removeFromSuperview()
+            }
         }
     }
     
@@ -37,17 +56,26 @@ class LoginViewController: UIViewController {
         loginView.fixInView(self.view)
         loginView.loginViewDelegate = self
         
-        if loginView.isAuthenticatedUserAvailable() {
-            removeSubViews()
-            print("Settings screen")
-        }
+        isLoggedInUser = loginView.isAuthenticatedUserAvailable()
     }
-    
-    //MARK: Public methods
-    func configureEmailView() {
+
+    private func configureEmailView() {
         emailView = EmailView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         emailView.fixInView(self.view)
         emailView.emailViewDelegate = self
+    }
+    
+    private func configurePhoneNumberView() {
+        phoneNumberView = PhoneNumberView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        phoneNumberView.fixInView(self.view)
+        phoneNumberView.phoneNumberViewDelegate = self
+    }
+    
+    private func configureOTPView() {
+        otpView = OTPView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        otpView.fixInView(self.view)
+        otpView.otpViewDelegate = self
+        otpView.phoneNumber = phoneNumber
     }
 }
 
@@ -56,6 +84,11 @@ extension LoginViewController: LoginViewDelegate {
     func didTapSignInEmail(view: LoginView) {
         removeSubViews()
         configureEmailView()
+    }
+    
+    func didTapSignInPhoneNumber(view: LoginView) {
+        removeSubViews()
+        configurePhoneNumberView()
     }
 }
 
@@ -68,5 +101,42 @@ extension LoginViewController: EmailViewDelegate {
     
     func didTapSignIn(view: EmailView, email: String, password: String) {
         loginView.didTapSignInOnEmailView(view: view, email: email, password: password)
+    }
+}
+
+extension LoginViewController: PhoneNumberViewDelegate {
+    
+    func didTapBack(view: PhoneNumberView) {
+        removeSubViews()
+        configureLoginView()
+    }
+    
+    func didTapSignInOnPhoneNumberView(view: PhoneNumberView, phoneNumber: String) {
+        loginView.didTapGetOTPView(phoneNumber: phoneNumber) { [weak self] isSuccess in
+            guard isSuccess else {
+                return
+            }
+            self?.removeSubViews()
+            self?.phoneNumber = phoneNumber
+            self?.configureOTPView()
+        }
+    }
+}
+
+extension LoginViewController: OTPViewDelegate {
+    func didClickLoginInOTPView(view: OTPView, smsCode: String) {
+        loginView.verifyOTP(otp: smsCode) { [weak self] isSuccess in
+            guard isSuccess else {
+                return
+            }
+            self?.isLoggedInUser = true
+            self?.removeSubViews()
+        }
+    }
+    
+   
+    func didClickEditPhoneNumber(view: OTPView) {
+        removeSubViews()
+        configurePhoneNumberView()
     }
 }
