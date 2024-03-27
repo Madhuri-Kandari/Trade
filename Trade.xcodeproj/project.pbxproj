@@ -26,8 +26,15 @@
 		348A61FD2BA62103009F4578 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348A61FC2BA62103009F4578 /* Utilities.swift */; };
 		349BC8042BA713AE00FE144F /* GoogleSignInResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC8032BA713AE00FE144F /* GoogleSignInResultModel.swift */; };
 		349BC8062BA713C800FE144F /* AuthDataResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC8052BA713C800FE144F /* AuthDataResultModel.swift */; };
+		34ABE9462BB2FF0D00CEEBF3 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE9452BB2FF0D00CEEBF3 /* PhoneNumberView.swift */; };
+		34ABE9482BB2FF1B00CEEBF3 /* PhoneNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34ABE9472BB2FF1B00CEEBF3 /* PhoneNumberView.xib */; };
+		34ABE94B2BB3338000CEEBF3 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE94A2BB3338000CEEBF3 /* OTPView.swift */; };
+		34ABE94D2BB3338B00CEEBF3 /* OTPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34ABE94C2BB3338B00CEEBF3 /* OTPView.xib */; };
+		34ABE9502BB34FC000CEEBF3 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABE94F2BB34FC000CEEBF3 /* MyTextField.swift */; };
 		34BA91A52BA88FC400B03ED2 /* EmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34BA91A42BA88FC400B03ED2 /* EmailView.xib */; };
 		34BA91A72BA88FCF00B03ED2 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BA91A62BA88FCF00B03ED2 /* EmailView.swift */; };
+		34CD394B2BADF17200F05D27 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CD394A2BADF17200F05D27 /* Coordinator.swift */; };
+		34CD394E2BADF18D00F05D27 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CD394D2BADF18D00F05D27 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,8 +69,15 @@
 		348A61FC2BA62103009F4578 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		349BC8032BA713AE00FE144F /* GoogleSignInResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInResultModel.swift; sourceTree = "<group>"; };
 		349BC8052BA713C800FE144F /* AuthDataResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataResultModel.swift; sourceTree = "<group>"; };
+		34ABE9452BB2FF0D00CEEBF3 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
+		34ABE9472BB2FF1B00CEEBF3 /* PhoneNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberView.xib; sourceTree = "<group>"; };
+		34ABE94A2BB3338000CEEBF3 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		34ABE94C2BB3338B00CEEBF3 /* OTPView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPView.xib; sourceTree = "<group>"; };
+		34ABE94F2BB34FC000CEEBF3 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
 		34BA91A42BA88FC400B03ED2 /* EmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailView.xib; sourceTree = "<group>"; };
 		34BA91A62BA88FCF00B03ED2 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		34CD394A2BADF17200F05D27 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		34CD394D2BADF18D00F05D27 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,8 @@
 		348A60782BA5AA3F009F4578 /* Trade */ = {
 			isa = PBXGroup;
 			children = (
+				34ABE94E2BB34F5100CEEBF3 /* CustomUI */,
+				34CD394C2BADF17A00F05D27 /* Coordinators */,
 				349BC8022BA7139F00FE144F /* Models */,
 				348A61F72BA61ABA009F4578 /* Service Managers */,
 				348A61F62BA61AAD009F4578 /* Service Protocols */,
@@ -136,6 +152,8 @@
 		348A60AB2BA5AAD3009F4578 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				34ABE9492BB3336800CEEBF3 /* OTPView */,
+				34ABE9442BB2FEE300CEEBF3 /* PhoneNumberView */,
 				34BA91A32BA88FB500B03ED2 /* EmailView */,
 				348A60AF2BA5AB44009F4578 /* LoginView */,
 			);
@@ -217,6 +235,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		34ABE9442BB2FEE300CEEBF3 /* PhoneNumberView */ = {
+			isa = PBXGroup;
+			children = (
+				34ABE9472BB2FF1B00CEEBF3 /* PhoneNumberView.xib */,
+				34ABE9452BB2FF0D00CEEBF3 /* PhoneNumberView.swift */,
+			);
+			path = PhoneNumberView;
+			sourceTree = "<group>";
+		};
+		34ABE9492BB3336800CEEBF3 /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				34ABE94A2BB3338000CEEBF3 /* OTPView.swift */,
+				34ABE94C2BB3338B00CEEBF3 /* OTPView.xib */,
+			);
+			path = OTPView;
+			sourceTree = "<group>";
+		};
+		34ABE94E2BB34F5100CEEBF3 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				34ABE94F2BB34FC000CEEBF3 /* MyTextField.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
 		34BA91A32BA88FB500B03ED2 /* EmailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +268,15 @@
 				34BA91A62BA88FCF00B03ED2 /* EmailView.swift */,
 			);
 			path = EmailView;
+			sourceTree = "<group>";
+		};
+		34CD394C2BADF17A00F05D27 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				34CD394A2BADF17200F05D27 /* Coordinator.swift */,
+				34CD394D2BADF18D00F05D27 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +349,11 @@
 			files = (
 				348A60832BA5AA40009F4578 /* Assets.xcassets in Resources */,
 				348A60862BA5AA40009F4578 /* Base in Resources */,
+				34ABE94D2BB3338B00CEEBF3 /* OTPView.xib in Resources */,
 				348A61092BA5CEA5009F4578 /* GoogleService-Info.plist in Resources */,
 				34BA91A52BA88FC400B03ED2 /* EmailView.xib in Resources */,
 				348A60AE2BA5AB3F009F4578 /* LoginView.xib in Resources */,
+				34ABE9482BB2FF1B00CEEBF3 /* PhoneNumberView.xib in Resources */,
 				348A60812BA5AA3F009F4578 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,9 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				348A607E2BA5AA3F009F4578 /* LoginViewController.swift in Sources */,
+				34CD394E2BADF18D00F05D27 /* MainCoordinator.swift in Sources */,
 				348A61FB2BA61AF6009F4578 /* AuthenticationManager.swift in Sources */,
+				34CD394B2BADF17200F05D27 /* Coordinator.swift in Sources */,
 				348A607A2BA5AA3F009F4578 /* AppDelegate.swift in Sources */,
 				348A61E02BA6101B009F4578 /* LoginViewModel.swift in Sources */,
+				34ABE94B2BB3338000CEEBF3 /* OTPView.swift in Sources */,
+				34ABE9462BB2FF0D00CEEBF3 /* PhoneNumberView.swift in Sources */,
+				34ABE9502BB34FC000CEEBF3 /* MyTextField.swift in Sources */,
 				348A61FD2BA62103009F4578 /* Utilities.swift in Sources */,
 				34BA91A72BA88FCF00B03ED2 /* EmailView.swift in Sources */,
 				348A60B12BA5AB61009F4578 /* LoginView.swift in Sources */,
