@@ -10,8 +10,10 @@ import GoogleSignIn
 import GoogleSignInSwift
 import FirebaseAuth
 
-@MainActor
 class AuthenticationManager: AuthenticationProtocol {
+    
+    private let auth = Auth.auth()
+    private var verificationID: String?
     
     @discardableResult
     func signInWithGoogle(tokens: GoogleSignInResultModel) async throws -> AuthDataResultModel {
@@ -19,12 +21,14 @@ class AuthenticationManager: AuthenticationProtocol {
         return try await signIn(credential: credential)
     }
     
+    @MainActor
     func signIn(credential: AuthCredential) async throws -> AuthDataResultModel {
-            let authDataResult = try await Auth.auth().signIn(with: credential)
+            let authDataResult = try await auth.signIn(with: credential)
             return AuthDataResultModel(user: authDataResult.user)
     }
     
     //MARK: Google Sign-In
+    @MainActor
     func getGoogleAuthToken() async throws {
         guard let topViewController = Utilities.shared.topViewController() else {
             throw URLError(.cannotFindHost)
@@ -43,14 +47,15 @@ class AuthenticationManager: AuthenticationProtocol {
 //MARK: Email Sign-In
 extension AuthenticationManager {
     //MARK: server, hence async
+    @MainActor
     func createUser(email: String, password: String) async throws -> AuthDataResultModel {
-        let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
+        let authDataResult = try await auth.createUser(withEmail: email, password: password)
         return AuthDataResultModel(user: authDataResult.user)
     }
     
     //MARK: checking locally, hence there is no async
-    nonisolated func getAuthenticatedUser() throws -> AuthDataResultModel {
-        guard let user = Auth.auth().currentUser else {
+    func getAuthenticatedUser() throws -> AuthDataResultModel {
+        guard let user = auth.currentUser else {
             throw URLError(.badServerResponse)
         }
         return AuthDataResultModel(user: user)
@@ -59,7 +64,39 @@ extension AuthenticationManager {
 
 //MARK: Sign-Out
 extension AuthenticationManager {
-    nonisolated func signOut() throws {
-        try Auth.auth().signOut()
+    nonisolated func signOut() throws -> Bool {
+        do {
+            try auth.signOut()
+            return true
+        } catch {
+            throw URLError(.badServerResponse)
+        }
+    }
+}
+
+extension AuthenticationManager {
+    func startAuthPhoneNumer(phoneNumber: String, completion: @escaping (Bool)-> Void) {
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { [weak self] verificationID, error in
+            guard let verificationID = verificationID, error == nil else {
+                completion(false)
+                return
+            }
+            self?.verificationID = verificationID
+            completion(true)
+        }
+    }
+    
+    func verifyOTP(otp: String, completion: @escaping (Bool)-> Void) {
+        guard let verificationID = verificationID else {
+            completion(false)
+            return
+        }
+        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: otp)
+        auth.signIn(with: credential) { result, error in
+            guard result != nil, error == nil else { 
+                completion(false)
+                return }
+            completion(true)
+        }
     }
 }
