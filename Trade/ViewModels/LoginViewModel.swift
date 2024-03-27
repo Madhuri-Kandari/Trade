@@ -25,9 +25,9 @@ class LoginViewModel {
             }
         }
     }
-    
-    
-    
+}
+
+extension LoginViewModel {
     func createUser(email: String, password: String) {
         Task {
             do {
@@ -43,5 +43,23 @@ class LoginViewModel {
     func isAuthenticatedUserAvailable() -> Bool {
         let user = try? authenticationProtocol.getAuthenticatedUser()
         return user == nil ? false : true
+    }
+}
+
+extension LoginViewModel {
+    func startAuth(phoneNumber: String, completion: @escaping (Bool)-> Void) {
+        authenticationProtocol.startAuthPhoneNumer(phoneNumber: phoneNumber, completion: completion)
+    }
+    
+    func verifyOTP(otp: String, completion: @escaping (Bool)-> Void) {
+        authenticationProtocol.verifyOTP(otp: otp, completion: completion)
+    }
+}
+
+extension LoginViewModel {
+    func signOut() -> Bool {
+        let result = try? authenticationProtocol.signOut()
+        guard let result = result else { return false }
+        return result
     }
 }
