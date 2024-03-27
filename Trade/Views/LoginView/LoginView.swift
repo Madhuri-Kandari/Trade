@@ -11,6 +11,7 @@ import GoogleSignIn
 //MARK: LoginViewDelegate
 protocol LoginViewDelegate: AnyObject {
     func didTapSignInEmail(view: LoginView)
+    func didTapSignInPhoneNumber(view: LoginView)
 }
 
 class LoginView: UIView {
@@ -36,6 +37,10 @@ class LoginView: UIView {
     }
     @IBAction func signInEmailAction(_ sender: UIButton) {
         loginViewDelegate?.didTapSignInEmail(view: self)
+    }
+    
+    @IBAction func signInPhoneNumberAction(_ sender: UIButton) {
+        loginViewDelegate?.didTapSignInPhoneNumber(view: self)
     }
     
     //MARK: Initialisers
@@ -64,6 +69,14 @@ extension LoginView {
     
     func isAuthenticatedUserAvailable() -> Bool {
         return viewModel.isAuthenticatedUserAvailable()
+    }
+    
+    func didTapGetOTPView(phoneNumber: String, completion: @escaping (Bool)-> Void) {
+        viewModel.startAuth(phoneNumber: phoneNumber, completion: completion)
+    }
+    
+    func verifyOTP(otp: String, completion: @escaping (Bool)-> Void) {
+        viewModel.verifyOTP(otp: otp, completion: completion)
     }
 }
 
